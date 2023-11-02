@@ -1,0 +1,8 @@
+Model: statements*=Statement;
+Statement: Arithmetic;
+Arithmetic: Add | Sub | Mul | Div | Mean;
+Add: left=INT 'PLUS' right=INT;
+Sub: left=INT 'MINUS' right=INT;
+Mul: left=INT 'MUL' right=INT;
+Div: left=INT 'DIV' right=INT;
+Mean: 'MEAN' '(' values+=INT (',' values+=INT)* ')';

@@ -1,0 +1,14 @@
+[Unit]
+Description=Tic-Tac-Toe Board Service
+After=network.target
+
+[Service]
+Type=simple
+User=tommys
+Group=tommys
+ExecStart=/usr/bin/python3 /path/to/your/script/board.py
+Restart=always
+WorkingDirectory=/home/tommys/Desktop/UnixServices
+
+[Install]
+WantedBy=multi-user.target

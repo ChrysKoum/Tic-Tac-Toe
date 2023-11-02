@@ -1,0 +1,14 @@
+[Unit]
+Description=Tic-Tac-Toe Player1 Service
+After=network.target
+
+[Service]
+Type=simple
+User=tommys
+Group=tommys
+ExecStart=/usr/bin/python3 /path/to/your/script/player1.py
+Restart=always
+WorkingDirectory=/home/tommys/Desktop/UnixServices
+
+[Install]
+WantedBy=multi-user.target

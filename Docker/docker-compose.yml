@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    networks:
+      - tictactoe-network
+
+  board:
+    build: 
+      context: .
+      dockerfile: Dockerfile.board
+    container_name: board
+    networks:
+      - tictactoe-network
+    stdin_open: true
+    tty: true
+
+  player1:
+    build: 
+      context: .
+      dockerfile: Dockerfile.player1
+    container_name: player1
+    networks:
+      - tictactoe-network
+
+  player2:
+    build: 
+      context: .
+      dockerfile: Dockerfile.player2
+    container_name: player2
+    networks:
+      - tictactoe-network
+
+networks:
+  tictactoe-network:
+    name: tictactoe-network
