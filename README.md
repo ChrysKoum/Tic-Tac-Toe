@@ -1,7 +1,3 @@
-Certainly! Below is a documentation template for your Tic Tac Toe project hosted on GitHub:
-
----
-
 # Tic Tac Toe Game
 
 This project is a distributed Tic Tac Toe game implemented using Python, RabbitMQ, Redis, Docker, and more. The game consists of two automated players and a board, all communicating through message brokers.
